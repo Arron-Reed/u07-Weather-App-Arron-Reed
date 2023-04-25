@@ -8,15 +8,20 @@ const App = () => {
 
   const getWeather = async () => {
     console.log(position);
+
+    const apiKey = import.meta.env.VITE_API_KEY;
+
     const URL =
       "https://api.openweathermap.org/data/2.5/weather?lat=" +
       position.lat +
       "&lon=" +
       position.lng +
-      "&units=metric&appid=8f4e32ccc809887b7c76956d8a05f875";
+      "&units=metric&appid=" +
+      apiKey;
     const response = await fetch(URL);
     const result = await response.json();
-    setForecast(result);      
+    setForecast(result); 
+    console.log(result);    
   }
 
   return (
