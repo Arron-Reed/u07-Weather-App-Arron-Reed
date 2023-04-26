@@ -1,17 +1,32 @@
 
 
-.search-container {
-  background-color: deepskyblue;
+.search-box {
+  background-color: #39acd3;
+  opacity: 0.75;
   width: 400px;
-  border: 5px solid black;
-  border-radius: 20px;
+  border-radius: 15px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin: 20px auto;
 }
 
-.weather-container {
-  background-color: deepskyblue;
+.current-weather {
+  background-color: #39acd3;
+  opacity: 0.75;
   width: 400px;
-  border: 5px solid black;
-  border-radius: 20px;
+  border-radius: 15px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin: 20px auto;
+}
+
+.forecast {
+  background-color: #39acd3;
+  opacity: 0.75;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin: 20px auto;
+}
+
+.forecast1 {
+  border: 1px solid black;
 }
