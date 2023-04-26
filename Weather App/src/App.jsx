@@ -3,42 +3,48 @@ import { useState } from 'react';
 import { useLocationStore } from './store/useLocationStore';
 
 const App = () => {
-  const [forecast, setForecast] = useState(undefined)
+  const [currentForecast, setCurrentForecast] = useState(undefined)
+  const [dailyForecast, setDailyForecast] = useState(undefined)
   const [position] = useLocationStore((state) => [state.position]);
 
   const getWeather = async () => {
     console.log(position);
-
     const apiKey = import.meta.env.VITE_API_KEY;
-
-    const URL =
-      "https://api.openweathermap.org/data/2.5/weather?lat=" +
+    const currentURL =
+      "https://api.openweathermap.org/data/2.5/forecast?lat=" +
       position.lat +
       "&lon=" +
       position.lng +
       "&units=metric&appid=" +
       apiKey;
-    const response = await fetch(URL);
-    const result = await response.json();
-    setForecast(result); 
-    console.log(result);    
+    const currentResponse = await fetch(currentURL);
+    const currentResult = await currentResponse.json();
+    setCurrentForecast(currentResult); 
+    console.log(currentResult);   
+    
   }
 
   return (
-    <div className='App'>
-      <h3>Weather Now</h3>
-      <p>Check out our weather app</p>
-      <button onClick={() => getWeather()}>Get Weather</button>
-      {forecast && (
+      <div className='search-container'>
+        <h3>Weather App</h3>
+        <button onClick={() => getWeather()}>Get Weather</button>
+      
+        {currentForecast && (
+
         <article>
-          <h3>{forecast.name}</h3>
-          <p>
-            In {forecast.name} it is currently {" "}
-            {forecast.main.temp} °C 
-          </p>
-      </article>
-      )}
-    </div>
+            <h3>{currentForecast.city.name}</h3>
+            <p>
+              In {currentForecast.name} it is currently {" "}
+              {currentForecast.list[0].main.temp} °C </p>
+            <p>Sunrise: {currentForecast.city.sunrise}</p>
+            <p>Sunset: {currentForecast.city.sunset}</p>
+            <p>Population: {currentForecast.city.population}</p>
+          </article>
+        )}
+
+      </div>
+      
+
   )
 }
 
