@@ -4,7 +4,7 @@ export const GetForecast = () => {
     const [dailyForecast, setDailyForecast] = useState(undefined)
     const [position] = useLocationStore((state) => [state.position]);
   
-    const getForecast = async () => {
+    const getCityWeather = async () => {
       console.log(position);
       const apiKey = import.meta.env.VITE_API_KEY;
   

@@ -1,4 +1,17 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
 .search-box {
   background-color: #39acd3;
@@ -6,27 +19,62 @@
   width: 400px;
   border-radius: 15px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  margin: 20px auto;
+  margin: 0 auto 7px;
+  height: 100px;
 }
 
 .current-weather {
   background-color: #39acd3;
-  opacity: 0.75;
+  opacity: 0.8;
   width: 400px;
   border-radius: 15px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  margin: 20px auto;
+  margin: 0 auto 7px;
+  padding: 15px 25px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.value-pairs1 {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: row;
+}
+
+.value-pairs {
+  display: flex;
+  flex-direction: row;
+}
+
+.right {
+  position: absolute;
+  left: 530px;
+}
+
+.temp {
+  font-size: 1.8rem;
+}
+
+.feelsLike {
+  font-size: .65rem;
+  margin-top: -8px;
 }
 
 .forecast {
   background-color: #39acd3;
   opacity: 0.75;
-  width: 400px;
+  width: 500px;
   border-radius: 15px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  margin: 20px auto;
+  margin: 0 auto 7px;
+  padding: 15px 20px;
+  color: white;
 }
 
 .forecast1 {
-  border: 1px solid black;
+  
+}
+
+h3 {
+  font-size: 1.5rem;
 }

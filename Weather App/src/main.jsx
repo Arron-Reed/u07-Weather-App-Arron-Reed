@@ -1,10 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { Link, RouterProvider, createBrowserRouter } from "react-router-dom"
-import { GetLocation } from './components/GetLocationComponent.jsx'
-import { GetForecast } from './components/GetForecastComponent.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { Link, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { GetLocation } from "./components/GetLocation/GetLocationComponent.jsx";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +11,7 @@ const router = createBrowserRouter([
     element: (
       <div className="body">
         <Link to="geo">Set profile info</Link>
-        <hr></hr>
+        
         <App />
       </div>
     ),
@@ -22,24 +21,13 @@ const router = createBrowserRouter([
     element: (
       <>
         <Link to="/">Search weather</Link>
-        <hr></hr>
+        
         <GetLocation />
-      </>
-    )
-  },
-  {
-    path: "forecast",
-    element: (
-      <>
-        <Link to="forecast">See the forecast</Link>
-        <hr></hr>
-        <GetForecast />
       </>
     ),
   },
-])
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-)
-
+);
