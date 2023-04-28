@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocationStore } from "../../store/useLocationStore";
 
 export const GetLocation = () => {

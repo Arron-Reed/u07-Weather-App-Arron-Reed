@@ -46,18 +46,42 @@ h1 {
   flex-direction: row;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 35px;
+}
+
+.right-header {
+  margin-left: 80px;
+  margin-top: 15px;
+
+}
+
 .right {
   position: absolute;
   left: 530px;
 }
 
 .temp {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-top: 8px;
 }
 
 .feelsLike {
-  font-size: .65rem;
+  font-size: .75rem;
   margin-top: -8px;
+}
+
+.weather {
+  font-size: .75rem;
+  margin-top: -30px;
+  margin-left: 15px;
+}
+
+.weather-image {
+  width: 100px;
+
 }
 
 .forecast {
@@ -77,4 +101,5 @@ h1 {
 
 h3 {
   font-size: 1.5rem;
+  margin-bottom: 5px;
 }

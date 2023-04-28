@@ -1,12 +1,13 @@
 import './App.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocationStore } from './store/useLocationStore';
+import { Search } from './components/SearchComponent/SearchComponent';
+import { GetLocation } from './components/GetLocation/GetLocationComponent';
 
 const App = () => {
   const [currentForecast, setCurrentForecast] = useState(undefined);
   const [position] = useLocationStore((state) => [state.position]);
-  const [searchQuery, setSearchQuery] = useState("");
-  
+
 
 // After reading more I realise I should use join() next time
 
@@ -16,8 +17,6 @@ const App = () => {
     const stepTwo = stepOne.replace(/"lng":/, '');
     const newPosition = stepTwo.slice(0, stepTwo.length - 1)
     console.log(newPosition)
-
-
 
     const apiKey = import.meta.env.VITE_API_KEY_WeatherAPI;
     const URL =
@@ -35,12 +34,14 @@ const App = () => {
 
   }
 
-  
   return (
     
       <div className='search-container'>
         <h1>Weather App</h1>
-        <div className='search-box'>    
+        <Search />
+        <div className='search-box'>  
+
+          
 {/*        
           <div>
             <form>
@@ -50,7 +51,7 @@ const App = () => {
             </form>
           </div>
 */} 
-
+   
          <button onClick={() => getWeather()}>Current Location</button>
   
         </div>
@@ -63,11 +64,10 @@ const App = () => {
 
               <div className="header">
                 <div>
-                  <p>{currentForecast.current.condition.icon}</p>
-                  <p>{currentForecast.current.condition.text}</p>
+                  <img src={currentForecast.current.condition.icon} className='weather-image'></img>
                 </div>
 
-                <div className="right">
+                <div className="right-header">
                   <p className="temp">{currentForecast.current.temp_c}°C</p>
                   <p className="feelsLike">Feels like {currentForecast.current.feelslike_c}°C</p>
                 </div>
@@ -104,22 +104,10 @@ const App = () => {
                 <p>{currentForecast.forecast.forecastday[0].day.mintemp_c} °C / {currentForecast.forecast.forecastday[0].day.maxtemp_c} °C</p>
                 <p>Precipitation: {currentForecast.forecast.forecastday[0].day.totalprecip_mm}mm</p>
               </div>
-
-              
-
-
-              
-
-              
             </div>
           </article>
         )}
       </div>
-
-
-      
-      
-
   )
 }
 
