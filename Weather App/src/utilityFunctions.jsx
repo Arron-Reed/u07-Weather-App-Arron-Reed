@@ -1,4 +1,4 @@
-//  Set up my App with the OpenWeatherMAp API - then changed API after a few days
+/*  Set up my App with the OpenWeatherMAp API - then changed API after a few days
 
     const apiKey = import.meta.env.VITE_API_KEY_OpenWeatherMap;
     const currentURL =
@@ -10,7 +10,7 @@
       apiKey;
 
 
-
+*/
     const getCityWeather = async () => {
         console.log(searchQuery);
       
@@ -29,4 +29,6 @@
         setCityForecast(result); 
         console.log(result); 
       }
+
+
     

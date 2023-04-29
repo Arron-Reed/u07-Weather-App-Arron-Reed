@@ -3,10 +3,7 @@ import { useLocationStore } from "../../store/useLocationStore";
 
 export const GetLocation = () => {
   const [status, setStatus] = useState("");
-  const [position, setPosition] = useLocationStore((state) => [
-    state.position,
-    state.setPosition,
-  ]);
+  const [position, setPosition] = useState("")
 
   const getLocation = () => {
     if (!navigator.geolocation) {
@@ -18,12 +15,17 @@ export const GetLocation = () => {
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setStatus("");
-        setPosition({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+        console.log(pos)
+        setPosition(pos.coords.latitude + "," + pos.coords.longitude);
+        console.log(position)
       },
       () => {
         setStatus("Unable to retrieve your position");
       }
     );
+
+    console.log(status);
+    console.log(position);
   };
 
   return (
