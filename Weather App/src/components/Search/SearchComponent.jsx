@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import "./searchComponent.css";
 import { dayOfWeek } from "../../dayOfWeek";
-import { getMonth } from "../../getMonth";
-
 
 export const Search = () => {
   
   const [forecast, setForecast] = useState();
   const [status, setStatus] = useState("");
-  const [city, setCity] = useState("Sydney");
+  const [city, setCity] = useState("Stockholm");
 
   const getWeather = async () => {
     try {
@@ -56,7 +54,7 @@ export const Search = () => {
     
     getLocation();
     getWeather();
-
+console.log(city)
   }, []);
 
 
@@ -77,7 +75,7 @@ export const Search = () => {
           <input
             type="text"
             placeholder="Select Location"
-            onClick={(event) => handleChange(event)}
+            onChange={(event) => handleChange(event)}
           ></input>
           <button type="submit">Search</button>
         </form>
@@ -176,9 +174,7 @@ export const Search = () => {
 
             <div className="h-header">
               <h4>Hourly Forecast</h4>
-              <h5> {dayOfWeek(new Date(forecast.forecast.forecastday[0].date_epoch * 1000).getDay())}, { forecast.forecast.forecastday[0].date.slice(8,) }
-               { // getMonth ( forecast.forecast.forecastday[0].date.slice(6,7)) }
-                }th April { forecast.forecast.forecastday[0].date.slice(0,4) }  
+              <h5> {dayOfWeek(new Date(forecast.forecast.forecastday[0].date_epoch * 1000).getDay())}, { forecast.forecast.forecastday[0].date.slice(8,) } May { forecast.forecast.forecastday[0].date.slice(0,4) }  
                </h5>
 
             </div>

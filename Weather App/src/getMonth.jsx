@@ -2,7 +2,7 @@ export const getMonth = (month) => {
     
     switch (month) { 
      case 0:
-       return("January");
+       return("Nothing");
        break;
      case 1:
        return("January");
