@@ -23,8 +23,6 @@ export const Search = () => {
       const response = await fetch(URL);
       const result = await response.json();
       
-      console.log(result)
-      
       setForecast(result);
     } catch (error) {
       console.log(error);
@@ -54,7 +52,7 @@ export const Search = () => {
     
     getLocation();
     getWeather();
-console.log(city)
+
   }, []);
 
 
