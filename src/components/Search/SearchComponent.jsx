@@ -12,7 +12,7 @@ export const Search = () => {
     try {
       const apiKey = import.meta.env.VITE_API_KEY_WeatherAPI;
       const URL =
-        "http://api.weatherapi.com/v1/forecast.json?key=" +
+        "https://api.weatherapi.com/v1/forecast.json?key=" +
         apiKey +
         "&q=" +
         city +
