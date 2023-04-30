@@ -1,7 +1,7 @@
 import './App.css'
 import { useEffect, useState } from 'react';
 import { useLocationStore } from './store/useLocationStore';
-import { Search } from './components/SearchComponent/SearchComponent';
+import { Search } from './components/Search/SearchComponent';
 
 const App = () => {
 
@@ -10,6 +10,7 @@ const App = () => {
     <div className='search-container'>
         <h1>Weather App</h1>
         <Search />
+        
     </div>
   )
 }
