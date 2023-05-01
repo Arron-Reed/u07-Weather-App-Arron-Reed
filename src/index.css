@@ -6,4 +6,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+
+@media screen and (max-width: 900px) {
+  body { 
+    height: 100vh;
+  }
+}
+
+a {
+  border-radius: 15px;
+  padding: 15px 20px;
+  border: none;
+  font-size: 1.2rem;
+  background: rgba(57, 172, 211, 0.8);
+  transition: width .05s, transform .5s;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  a {    
+    padding: 5px 5px;
+    font-size: 0.6rem;
+  }
 }

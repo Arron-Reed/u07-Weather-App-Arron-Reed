@@ -243,3 +243,194 @@
     font-size: 1.2rem;
   }
 
+  @media screen and (max-width: 825px) {
+    
+  button {
+    transition: none;
+  }
+
+  button:hover {
+    transform: none;
+  }
+
+  .current-weather {
+    transition: none;
+  }
+
+  .current-weather:hover {
+    transform: none;
+  }
+
+  .forecast {
+    transition: none
+  }
+
+  .forecast:hover {
+    transform: none;
+  }
+
+  .hourly {
+    transition: none;
+  }
+  
+  .hourly:hover {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: -5px;
+    margin-top: -15px;
+  }
+  
+  .search-box {
+    width: 300px;
+    margin: 0 auto 5px;
+    padding: 5px 0px;
+  }
+  
+  .search-form {
+    padding: .5em;
+  }
+
+  input {
+    height: 25px;
+    width: 80%;
+    font-size: .8rem;
+  }
+
+  button {
+    height: 25px;
+    width: 80%;
+    margin-top: 8px;
+    font-size: .9rem;
+  }
+
+  .current-weather {
+    width: 300px;
+    margin: 0 auto 5px;
+    padding: 10px 20px 10px;
+  }
+  
+  .right {
+    margin-left: 110px;
+  
+  }
+
+   .right p {
+    margin-bottom: 3px;
+    font-size: 0.8rem;
+   }
+
+  .left {
+    margin-top: 10px;
+  }
+
+  .left p {
+    margin-bottom: 3px;
+    font-size: 0.8rem;
+   }
+
+  .header {
+    margin-top: -5px;
+    margin-left: 20px;
+  }
+  
+  .right-header {
+    margin-left: 50px;
+    margin-top: 1px;
+  }
+  
+  .temp {
+    font-size: 2rem;
+    margin-top: 8px;
+  }
+  
+  .feelsLike {
+    font-size: .7rem;
+    margin-top: -5px;
+  }
+  
+  .info {
+   margin-top: -15px;
+  }
+  
+  .weather-image {
+    width: 80px;
+    margin-top: -px;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .forecast {
+    width: 300px;
+    margin: 0 auto 5px;
+    padding: 0 5px;
+  }
+
+  .forecast-image {
+    width: 80%;
+  }
+
+  .weekDay {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .forecast-temp {
+    font-size: 0.75rem;
+    margin-bottom: 7px;
+    margin-top: 2px;
+  }
+
+  .ft-left {
+    margin-right: 3px;
+  }
+
+  .ft-right {
+    margin-left: 3px;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 0.7rem;
+  }
+
+  .hourly {   
+    width: 300px;
+    margin: 0 auto 5px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .htime {
+    font-size: 0.8rem;
+  }
+
+  .htemp {
+    font-size: 0.8rem;
+  }
+
+  .hwind {
+    font-size: 0.8rem;
+  }
+
+  .hwdir {
+    font-size: 0.8rem;
+  }
+  
+  .hi {
+    width: 70%;
+  }
+
+  .hourly-inner {
+    grid-template-columns: auto 30px auto auto auto;
+ }
+}
