@@ -431,6 +431,7 @@
   }
 
   .hourly-inner {
-    grid-template-columns: auto 30px auto auto auto;
+    margin-top: 7px;
+    grid-template-columns: auto 40px auto auto auto;
  }
 }
