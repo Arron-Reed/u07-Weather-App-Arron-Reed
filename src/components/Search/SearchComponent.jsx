@@ -6,11 +6,12 @@ export const Search = () => {
   
   const [forecast, setForecast] = useState();
   const [status, setStatus] = useState("");
-  const [city, setCity] = useState("Stockholm");
+  const [city, setCity] = useState("");
 
   const getWeather = async () => {
     try {
-      const apiKey = import.meta.env.VITE_API_KEY_WeatherAPI;
+      if (city !== "") {
+        const apiKey = import.meta.env.VITE_API_KEY_WeatherAPI;
       const URL =
         "https://api.weatherapi.com/v1/forecast.json?key=" +
         apiKey +
@@ -24,6 +25,9 @@ export const Search = () => {
       const result = await response.json();
       
       setForecast(result);
+
+      }
+      
     } catch (error) {
       console.log(error);
     }
@@ -36,7 +40,7 @@ export const Search = () => {
       setStatus("Loading...");
     }
 
-    navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.getCurrentPosition( (position) => {
       setStatus(""); setCity(position.coords.latitude + "," + position.coords.longitude);
       },
 
@@ -49,11 +53,9 @@ export const Search = () => {
 
 
   useEffect(() => {
-    
     getLocation();
     getWeather();
-
-  }, []);
+  }, [city]);
 
 
   const handleChange = (event) => {
