@@ -6,7 +6,7 @@ export const Search = () => {
   
   const [forecast, setForecast] = useState();
   const [status, setStatus] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Stockholm");
 
   const getWeather = async () => {
     try {
