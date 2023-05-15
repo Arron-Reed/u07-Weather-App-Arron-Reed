@@ -10,20 +10,8 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <div className="body">
-        <Link to="geo">Set profile info</Link>
-        
         <App />
       </div>
-    ),
-  },
-  {
-    path: "geo",
-    element: (
-      <>
-        <Link to="/">Search weather</Link>
-        
-        <GetLocation />
-      </>
     ),
   },
 ]);
