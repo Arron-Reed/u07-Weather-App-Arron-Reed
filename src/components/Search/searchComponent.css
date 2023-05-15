@@ -320,6 +320,22 @@
   .hourly:hover {
     transform: none;
   }
+
+  .currentLocation {
+    transition: none;
+  }
+
+  .currentLocation:hover {
+    transform: none;
+  }
+
+  .celciusFarenheit {
+    transition: none;
+  }
+
+  .celciusFarenheit:hover {
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -350,6 +366,21 @@
     height: 25px;
     width: 80%;
     margin-top: 8px;
+    font-size: .9rem;
+  }
+
+  .currentLocation {
+    height: 25px;
+    width: 171px;
+    margin: 100px 0px 15px;
+    margin-top: 0px;
+    font-size: .9rem;
+  }
+
+  .celciusFarenheit {
+    height: 25px;
+    width: 50px;
+    margin-top: 0px;
     font-size: .9rem;
   }
 
@@ -476,6 +507,6 @@
 
   .hourly-inner {
     margin-top: 7px;
-    grid-template-columns: auto 40px auto auto auto;
+    grid-template-columns: auto 40px auto auto 30px;
  }
 }
