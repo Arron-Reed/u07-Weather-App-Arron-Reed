@@ -20,14 +20,20 @@
     margin: 0 auto 7px;
     height: auto;
     cursor: pointer;
-
   }
   
+.addOn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
   .search-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.2em;
+    padding: 20px 20px 0px 20px;
     align-items: center;
   }
 
@@ -54,6 +60,44 @@
   }
 
   button:hover {
+    background-color: rgb(246, 186, 0);
+    transform: scale(1.05);
+  }
+
+  .currentLocation {
+    height: 35px;
+    border-radius: 15px;
+    width: 223px;
+    margin: 100px 0px 15px;
+    margin-top: 10px;
+    color: black;
+    border: none;
+    font-size: 1rem;
+    background-color: rgb(227, 180, 50);
+    transition: width .05s, transform .5s;
+    cursor: pointer;
+  }
+
+  .currentLocation:hover {
+    background-color: rgb(246, 186, 0);
+    transform: scale(1.05);
+  }
+
+  .celciusFarenheit {
+    height: 35px;
+    border-radius: 15px;
+    width: 60px;
+    margin-left: 7px;
+    margin-top: 10px;
+    color: black;
+    border: none;
+    font-size: 1rem;
+    background-color: rgb(227, 180, 50);
+    transition: width .05s, transform .5s;
+    cursor: pointer;
+  }
+
+  .celciusFarenheit:hover {
     background-color: rgb(246, 186, 0);
     transform: scale(1.05);
   }
@@ -217,7 +261,7 @@
 
  .hourly-inner {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto 40px;
     justify-content: space-between;
  }
 
