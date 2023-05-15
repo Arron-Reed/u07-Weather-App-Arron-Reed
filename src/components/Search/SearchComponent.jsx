@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import "./searchComponent.css";
 import { dayOfWeek } from "../../dayOfWeek";
+import { useRef } from 'react';
 
 export const Search = () => {
   
   const [forecast, setForecast] = useState();
   const [status, setStatus] = useState("");
-  const [city, setCity] = useState("Stockholm");
+  const [city, setCity] = useState("");
+  const [celcius, setCelcius] = useState("celcius");
 
   const getWeather = async () => {
     try {
@@ -53,18 +55,18 @@ export const Search = () => {
 
 
   useEffect(() => {
+  if (city == "")
     getLocation();
     getWeather();
   }, [city]);
 
 
-  const handleChange = (event) => {
-    setCity(event.target.value);
-  };
+  const inputRef = useRef(null);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getWeather();
+    setCity(inputRef.current.value);
   };
 
   return (
@@ -75,7 +77,7 @@ export const Search = () => {
           <input
             type="text"
             placeholder="Select Location"
-            onChange={(event) => handleChange(event)}
+            ref={inputRef}
           ></input>
           <button type="submit">Search</button>
         </form>
