@@ -366,6 +366,9 @@
     height: 25px;
     width: 80%;
     font-size: .8rem;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    }
   }
 
   button {
@@ -515,4 +518,4 @@
     margin-top: 7px;
     grid-template-columns: auto 40px auto auto 30px;
  }
-}
+
