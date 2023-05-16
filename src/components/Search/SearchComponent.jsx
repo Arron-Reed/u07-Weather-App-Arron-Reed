@@ -78,7 +78,7 @@ export const Search = () => {
             placeholder="Select Location"
             ref={inputRef}
           ></input>
-          <button type="submit">Search</button>
+          <button className="search" type="submit">Search</button>
         </form>
 
         <div className="addOn">
@@ -239,33 +239,10 @@ export const Search = () => {
             <div>
               {[0, 3, 6, 9, 12, 15, 18, 21].map((h) => (
                 <div className="hourly-inner" key={h}>
-                  <p className="htime">
-                    {forecast.forecast.forecastday[0].hour[h].time.slice(11)}
-                  </p>
-                  <img
-                    src={
-                      forecast.forecast.forecastday[0].hour[h].condition.icon
-                    }
-                    alt="weather"
-                    className="hi"
-                  ></img>
-                  {celcius && (
-                    <p className="htemp">
-                      {Math.round(
-                        forecast.forecast.forecastday[0].hour[h].temp_c
-                      )}
-                      °
-                    </p>
-                  )}
-                  {!celcius && (
-                    <p className="htemp">
-                      {Math.round(
-                        (forecast.forecast.forecastday[0].hour[h].temp_c * 9) /
-                          5
-                      ) + 32}
-                      °
-                    </p>
-                  )}
+                  <p className="htime">{forecast.forecast.forecastday[0].hour[h].time.slice(11)}</p>
+                  <img src={forecast.forecast.forecastday[0].hour[h].condition.icon} alt="weather" className="hi"></img>
+                  {celcius && (<p className="htemp"> {Math.round(forecast.forecast.forecastday[0].hour[h].temp_c)}°</p>)}
+                  {!celcius && (<p className="htemp">{Math.round((forecast.forecast.forecastday[0].hour[h].temp_c * 9)/5) + 32}°</p>)}
 
                   <p className="hwind">
                     {Math.round(

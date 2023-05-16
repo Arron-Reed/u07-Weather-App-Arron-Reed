@@ -2,12 +2,10 @@
   background: url("/src/assets/images/NZ-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   background-position: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 @media screen and (max-width: 900px) {
@@ -25,8 +23,6 @@ a {
   padding: 15px 20px;
   border: none;
   font-size: 1.2rem;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   background: rgba(57, 172, 211, 0.8);
   transition: width .05s, transform .5s;
   cursor: pointer;
