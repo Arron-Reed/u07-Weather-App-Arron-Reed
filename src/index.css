@@ -25,6 +25,8 @@ a {
   padding: 15px 20px;
   border: none;
   font-size: 1.2rem;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   background: rgba(57, 172, 211, 0.8);
   transition: width .05s, transform .5s;
   cursor: pointer;
