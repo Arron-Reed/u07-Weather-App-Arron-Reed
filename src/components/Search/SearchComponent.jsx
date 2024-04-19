@@ -19,7 +19,7 @@ export const Search = () => {
           apiKey +
           "&q=" +
           city +
-          "&days=5" +
+          "&days=3" +
           "&aqi=no" +
           "&alerts=no";
 
@@ -162,7 +162,7 @@ export const Search = () => {
           </div>
 
           <div className="forecast">
-            {[0, 1, 2, 3, 4].map((i) => (
+            {[0, 1, 2].map((i) => (
               <div className="forecast-box" key={i}>
                 <p className="weekDay">
                   {" "}

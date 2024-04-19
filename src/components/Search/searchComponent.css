@@ -182,7 +182,7 @@ h3 {
 .forecast {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   background: rgba(163, 194, 205, 0.75);
   width: 400px;
   border-radius: 15px;
