@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "./searchComponent.css";
 import { dayOfWeek } from "../../dayOfWeek";
 import { getMonth } from "../../getMonth";
 import { useRef } from "react";
+import "./searchComponent.css";
 
 export const Search = () => {
   const [forecast, setForecast] = useState();
@@ -13,7 +13,7 @@ export const Search = () => {
   const getWeather = async () => {
     try {
       if (city !== "") {
-        const apiKey = import.meta.env.VITE_API_KEY_WeatherAPI;
+        const apiKey = import.meta.env.VITE_API_KEY;
         const URL =
           "https://api.weatherapi.com/v1/forecast.json?key=" +
           apiKey +

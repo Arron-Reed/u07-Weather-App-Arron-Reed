@@ -8,7 +8,7 @@ const App = () => {
   return (
     
     <div className='search-container'>
-        <h1>My Weather App</h1>
+        <h1>Arrons Weather App</h1>
         <Search />
         
     </div>
