@@ -1,4 +1,20 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2BuR3aX-)
+I made some changes to get this deployed on my website (Hostinger)
+After I ran the npm run build I added "/weather-app" to the paths for my Favicon, Js and CSS files inside the index.html.
 
+I also had to change the code in my main.jsx to match the subdirectory in Hostinger (arronreed.com/weather-app)
 
-Hello
+const router = createBrowserRouter(
+[
+{
+path: "/",
+element: (
+<div className="body">
+<App />
+</div>
+),
+},
+],
+{
+basename: "/weather-app", // Add this line
+}
+);
